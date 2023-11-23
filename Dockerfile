@@ -7,4 +7,4 @@ RUN mkdir -p /content && \
     pip install md2cf
 
 WORKDIR /content
-CMD python -m md2cf --parent-id "${CONFLUENCE_PARENT_ID}" --minor-edit --only-changed --skip-empty --beautify-folders --collapse-single-pages /content
+CMD python -m md2cf --parent-id "${CONFLUENCE_PARENT_ID}" --minor-edit --only-changed --skip-empty --beautify-folders --collapse-empty --collapse-single-pages --enable-relative-links /content
